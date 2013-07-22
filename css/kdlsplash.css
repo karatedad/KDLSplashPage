@@ -1,0 +1,99 @@
+/* Styles that we put on top of Bootstrap */
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+/* Sticky footer styles
+   -------------------------------------------------- */
+
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 60px;
+}
+#footer {
+    background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Remove top padding when top navbar goes static in narrow viewports */
+/*@media (max-width: 979px) {
+    body {
+        padding-top: 0;
+    }
+}*/
+
+/* add background-color tracking for navbar items */
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+    background-color: #dbdbdb;
+    color: #333333;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+/* add to Bootstrap's .carousel-caption style to support opacity in the slide caption in IE8 and under */
+.carousel-caption {
+    /* inherit the other properties */
+
+    /* IE fun */
+    background:none;
+    /* for IE8 */
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#26333333,endColorstr=#26333333);
+    /* for IE7 and below */
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000);
+    zoom: 1;
+
+    /* IMPORTANT!!! */
+    /* Make sure we put back the original call to rgba() AFTER our IE fix above */
+    /* because part of the IE hack sets the background to none. */
+    background: rgba(0, 0, 0, 0.75);
+}
+
+
+/* -----------------------------------------
+   about.html
+----------------------------------------- */
+#ProfilePic {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 1.3em;
+}
+
+/* -----------------------------------------
+   gellery.html
+----------------------------------------- */
+#VideosHeader {
+    text-align: center;
+    padding: 0.2em;
+    border-bottom: 1px solid #aaaaaa;
+}
